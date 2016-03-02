@@ -11,8 +11,11 @@ from django.shortcuts import render, get_object_or_404
 
 # Plans
 def plans(request):
+	plan = Plan.objects.order_by('id')
 	template = loader.get_template('plans.html')
-	context = {}
+	context = {
+		'plan': plan
+	}
 	return HttpResponse(template.render(context, request))
 
 #Plans detail

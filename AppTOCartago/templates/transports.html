@@ -49,23 +49,32 @@
 
 	<section class="full-height">	
 		<div class="container">
+
 			<div class="row">
 				<div class="col-10">
-					<h2>Transporte</h2>					
+					<h2>Transporte</h2>
+					<p>Ven a disfrutar del vehiculo tipico de la region.</p>	
 				</div>	
 			</div>
 
             <div class="row">
                 {% for tp in transport %}
                 <div class="col-3">
-                	<img src="{{ tp.image.url }}" class="same-height">   
-                	{{ transpor.price }}             	
+                	<img src="{{ tp.image.url }}" class="same-height">                	
                 </div>
                 {% endfor %}
-            </div>				
+            </div>			
 
+            <ol class="row">
+            	{% for tp in transport %}
+               	<li class="col-3">
+                   	<a href="{% url 'transports.views.transport_detail' pk=tp.pk %} ">
+					{{ tp.name }}
+               	</li>
+               	{% endfor %}
+            </ol>			
 		</div>		
-	</section>
+	</section>	
 
 	<footer>
 		<div class="container">

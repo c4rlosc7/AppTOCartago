@@ -47,23 +47,34 @@
 
 	</header>
 
-	<section class="home">	
-		<div class="container">		
-			<div class="row center">
-				<h1 class="col-10">
-					Planes
-				</h1>			
+	<section class="full-height">	
+		<div class="container">
 
-				<div class="col-3">
-
-				</div>
-
-				<div class="col-3">
-					<a href="{% url 'hotels.views.home' %}">inicio</a>
-				</div>
+			<div class="row">
+				<div class="col-10">
+					<h2>Planes</h2>
+					<p>Disfruta del mejor plan de Colombia.</p>	
+				</div>	
 			</div>
+
+            <div class="row">
+                {% for pn in plan %}
+                <div class="col-3">
+                	<img src="{{ pn.image.url }}" class="same-height">                	
+                </div>
+                {% endfor %}
+            </div>			
+
+            <ol class="row">
+            	{% for pn in plan %}
+               	<li class="col-3">
+                   	<a href="{% url 'plans.views.plan_detail' pk=pn.pk %} ">
+					{{ pn.name }}
+               	</li>
+               	{% endfor %}
+            </ol>			
 		</div>		
-	</section>
+	</section>	
 
 	<footer>
 		<div class="container">

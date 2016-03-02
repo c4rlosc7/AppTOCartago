@@ -39,6 +39,11 @@ same-height{
 	overflow: hidden;
 }
 
+same-heights{
+	max-height: 200px;
+	overflow: hidden;
+}
+
 float{
 	display: inline;
 	max-width: 15%;
