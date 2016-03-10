@@ -14,7 +14,7 @@ h2{
 }
 
 p{
-	color: #636363;
+	color: #2b0b18;
 	padding: 2%;
 	/*text-transform: capitalize;*/
 }
@@ -26,6 +26,10 @@ iframe{
 a {
 	text-decoration: none;
 	color: #c3c1c1;
+}
+
+.a_{
+	color: #2b0b18;
 }
 
 ol li {

@@ -60,7 +60,7 @@
                 {% for ac in activity %}
                 <div class="col-3">
                 	<img src="{{ ac.image.url }}" class="same-height">   
-                	<a href="{% url 'activities.views.activities_detail' pk=ac.pk %} ">
+                	<a class="a_" href="{% url 'activities.views.activities_detail' pk=ac.pk %} ">
 					{{ ac.name }}             	
                 </div>
                 {% endfor %}

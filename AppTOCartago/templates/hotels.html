@@ -68,7 +68,7 @@
             <ol class="row">
             	{% for ht in hotel %}
                	<li class="col-3">
-                   	<a href="{% url 'hotels.views.hotel_detail' pk=ht.pk %} ">
+                   	<a class="a_" href="{% url 'hotels.views.hotel_detail' pk=ht.pk %} ">
 					{{ ht.name }}
                	</li>
                	{% endfor %}

@@ -68,7 +68,7 @@
             <ol class="row">
             	{% for pn in plan %}
                	<li class="col-3">
-                   	<a href="{% url 'plans.views.plan_detail' pk=pn.pk %} ">
+                   	<a class="a_" href="{% url 'plans.views.plan_detail' pk=pn.pk %} ">
 					{{ pn.name }}
                	</li>
                	{% endfor %}
